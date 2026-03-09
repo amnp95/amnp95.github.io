@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Real-Time FEM with WebGPU | Amin Pakzad</title>
+    <!-- Use the exact same fonts as the index page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link back to your main style.css to share the design automatically! -->
+    <!-- Notice the /style.css path, meaning it goes back to the root folder -->
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* A few extra styles specifically for formatting a blog article nicely */
+        .blog-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 900px;
+            margin: 0 auto 1rem;
+            line-height: 1.3;
+        }
+        .blog-meta {
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .article-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Standard Navigation (Same as index.html) -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Amin Pakzad</a>
+            <ul class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#blog">Blog</a></li>
+                <li><a href="/#invite">Collaborate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The Title Section of the Blog -->
+    <header class="blog-header">
+        <div class="container">
+            <div class="blog-meta">Published on Oct 15, 2026</div>
+            <h1>The Future of Real-Time FEM with WebGPU</h1>
+        </div>
+    </header>
+
+    <!-- This is where you actually type your paragraphs! -->
+    <main class="article-body">
+        <p>This is where you write the actual text of your blog post! Because we are running Vite, you can just treat this like any normal HTML file.</p>
+        
+        <h2>The Power of the Browser</h2>
+        <p>Currently, running finite element analysis requires massive computational clusters. However, with the introduction of WebGPU, modern web browsers now have direct, low-level access to the graphics card on any consumer machine.</p>
+        
+        <p>In this article, I will explain exactly how I architected a web-based FEM meshmaker that runs fluidly at 60 frames per second using JavaScript and GLSL shaders directly inside a standard web browser.</p>
+
+        <!-- A link to take the user back to your main portfolio -->
+        <a href="/" class="back-link">← Back to Home</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Amin Pakzad. Built with precision and passion for computational science.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
