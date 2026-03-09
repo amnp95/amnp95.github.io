@@ -5,8 +5,8 @@
     --bg-tertiary: #f1f5f9;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent-primary: #2563eb;    /* Deep Academic Blue */
-    --accent-hover: #1d4ed8;
+    --accent-primary: #c2410c;    /* Burnt Orange / Terracotta */
+    --accent-hover: #9a3412;
     --border-color: #e2e8f0;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -70,14 +70,21 @@ section { padding: 6rem 0; }
 .bg-light { background-color: var(--bg-secondary); }
 
 /* Hero */
-.hero { padding: 10rem 0 6rem; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); }
+.hero { padding: 10rem 0 6rem; background: linear-gradient(135deg, #f8fafc 0%, #ffedd5 100%); }
 .hero-container { display: flex; align-items: center; justify-content: space-between; gap: 4rem; }
 .hero-content { flex: 1; text-align: left; }
 .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
 .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2.5rem; }
 .hero-btns { display: flex; gap: 1rem; }
-.hero-image { flex: 1; display: flex; justify-content: center; position: relative; }
-.hero-image img { width: 100%; max-width: 350px; border-radius: 20px; box-shadow: var(--shadow-lg); object-fit: cover; aspect-ratio: 1; border: 8px solid white; }
+.hero-profile { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.hero-image { display: flex; justify-content: center; position: relative; width: 100%; max-width: 350px; }
+.hero-image > img { width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); border: 8px solid white; display: block; }
+.school-badges { position: absolute; bottom: -15px; right: -15px; display: flex; gap: 0.6rem; z-index: 10; }
+.school-badges img { width: 3.8rem; height: 3.8rem; background: white; border-radius: 50%; padding: 0.5rem; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); object-fit: contain; transition: transform 0.2s; }
+.school-badges img:hover { transform: translateY(-3px) scale(1.05); box-shadow: var(--shadow-lg); }
+.hero-links { display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+.hero-links a { display: inline-flex; align-items: center; font-weight: 500; font-size: 0.9rem; color: var(--text-secondary); transition: all 0.2s; padding: 0.5rem 0.8rem; background: white; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+.hero-links a:hover { color: var(--accent-primary); border-color: var(--accent-primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
 /* Projects Grid */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }

@@ -1,0 +1,34 @@
+name: Compile CV
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/cv/cv.tex'
+
+jobs:
+  build_cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Important: lets the action push files back to your repo
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          # Your cv file
+          root_file: cv.tex
+          # The directory it's in
+          working_directory: data/cv
+
+      - name: Move compiled PDF to Root Folder
+        run: mv data/cv/cv.pdf ./Amin_Pakzad_CV.pdf
+
+      - name: Commit and push the new PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-Compile LaTeX CV [skip ci]"
+          file_pattern: "Amin_Pakzad_CV.pdf"

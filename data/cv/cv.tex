@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper,sans]{moderncv} 
+\moderncvstyle{banking} 
+\moderncvcolor{black} 
+% Add this to make bold more visible without changing style:
+\usepackage{xcolor}
+
+% Subtle enhancement - makes bold text slightly darker
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\color{black!90}#1}}
+
+% Optional: highlight technical terms with slight emphasis
+\newcommand{\tech}[1]{\textbf{#1}}
+\usepackage[utf8]{inputenc}
+
+% Adjusted scale slightly to ensure fit
+\usepackage[scale=0.94, top=0.5cm, bottom=0.5cm]{geometry} 
+\usepackage{fancyhdr}
+
+
+% Bullet point spacing - Optimized
+\usepackage{enumitem}
+\setlist[itemize]{label=\textbullet, itemsep=0.15em, topsep=0.2em, leftmargin=3ex}
+
+% HYPERLINK SETUP: Links are clickable but appear BLACK (Professional)
+\usepackage{hyperref} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdftitle={Amin Pakzad - Research Scientist CV}
+}
+% Add to preamble
+\renewcommand*{\section}[1]{%
+  \vspace{0.5cm}%
+  {\Large\bfseries #1}%
+  \par\nobreak
+  \vspace{0.2cm}%
+  \hrule height 1.2pt
+  \vspace{1pt}
+  \hrule height 0.4pt
+  \par\nobreak
+  \vspace{0.3cm}%
+}
+%--------------------------
+% Personal data
+%--------------------------
+\name{Amin}{Pakzad}
+\phone[mobile]{206-536-5850}
+\email{amin.pakzad.work@gmail.com}
+\social[linkedin]{amin-pakzad-8a05b0127}
+\social[github]{amnp95}
+\extrainfo{Applied Scientist (ML) | Large-Scale Systems \& Model Development}
+
+\begin{document}
+\makecvtitle
+\vspace*{-1.0cm}
+
+%--------------------------
+% Profile
+%--------------------------
+\section{Profile}
+\cvitem{}{
+\small{
+Applied Scientist with a focus on massively parallel systems and distributed software architecture. Expert in scaling Python/C++ applications across thousands of cores and designing end-to-end pipelines for large-scale modeling. Interested in the intersection of high-performance engineering and applied machine learning
+}}
+
+%--------------------------
+% Experience
+%--------------------------
+\section{Professional Experience}
+
+\cventry{Jul 2023 -- Present}{Research Engineer / Applied Scientist}{SimCenter \& DesignSafe (NSF)}{Berkeley, CA}{}{
+\begin{itemize}
+  \item Designed and implemented end-to-end computational frameworks combining Python and C++ to execute large-scale workloads on distributed infrastructure (TACC clusters).
+  \item Developed scalable data ingestion, preprocessing, and post-processing workflows to support high-throughput experimentation across thousands of parallel jobs.
+  \item Optimized performance-critical components using MPI, enabling experiments to scale efficiently across thousands of CPU cores.
+  \item Built robust execution pipelines with standardized configuration and result aggregation to support comparative model and simulation evaluation.
+  \item Authored developer-facing documentation and Jupyter-based analysis notebooks to enable rapid experimentation by external users.
+\end{itemize}}
+
+\cventry{Jan 2022 -- Present}{Graduate Research Assistant / Core Developer}{University of Washington}{Seattle, WA}{}{
+\begin{itemize}
+  \item Architected \textbf{Femora}, a Python framework for automated model generation and experimentation, used as part of downstream ML and simulation pipelines.
+  \item Implemented algorithms for large-scale geometry and data processing, reducing preprocessing time from weeks to minutes.
+  \item Extended performance-critical C++ components to support adaptive control logic and improved numerical stability in long-running experiments.
+  \item Designed binary I/O pipelines (HDF5, VTK) to efficiently store and analyze large experimental outputs.
+  \item Built validation pipelines comparing simulated outputs against experimental datasets, enabling quantitative evaluation of model accuracy and generalization.
+\end{itemize}}
+
+%--------------------------
+% Technical Skills
+%--------------------------
+\section{Technical Skills}
+\cvitem{Machine Learning}{PyTorch, Scikit-learn, PINNs, model training \& evaluation, experiment design.}
+\cvitem{Systems \& Performance}{MPI, OpenMP, CUDA, Linux, Docker, distributed computing, profiling.}
+\cvitem{Languages}{Python (expert), C++ (advanced), MATLAB, SQL.}
+\cvitem{Data \& Tools}{NumPy, Pandas, HDF5, Jupyter, Git, CI workflows.}
+
+%----------------------------------------------------------------------------------------
+%    EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\cventry{Exp. 2026}{PhD Civil Engineering (Computational)}{University of Washington}{GPA: 3.85}{}{\small \textit{Thesis: High-Fidelity Dynamic Analysis utilizing Massively Parallel Computing (HPC).}}
+
+\cventry{Exp. 2027}{M.S. Computer Science (Machine Learning)}{Georgia Tech}{GPA: 4.0}{}{}
+
+\cventry{2024}{M.S. Applied Mathematics}{University of Washington}{GPA: 4.0}{}{}
+
+%--------------------------
+% Publications
+%--------------------------
+\section{Selected Software \& Publications}
+\cvitem{2024}{McKenna, F., ... \textbf{Pakzad, A.}, et al. NHERI-SimCenter/EE-UQ v4.1.0 (Zenodo).}
+\cvitem{2024}{\textbf{Pakzad, A.}, Arduino, P. Workflow for high-fidelity dynamic analysis (Pan-American Conference).}
+\cvitem{2024}{\textbf{Pakzad, A.}, Arduino, P. Assessment of constitutive models (Soil Dynamics \& Earthquake Engineering).}
+
+\end{document}
