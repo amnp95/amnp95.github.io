@@ -41,3 +41,4 @@ dist-ssr
 *.toc
 *.run.xml
 *.synctex.gz
+*cv.synctex(busy)

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femora: Fast Efficient Meta-Modeling for OpenSees-based Resilience Analysis | Amin Pakzad</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-page">
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo">Amin Pakzad</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#invite">Collaborate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-hero">
+        <div class="container">
+            <p class="project-kicker">Project Spotlight</p>
+            <h1 class="project-title">Femora: Fast Efficient Meta-Modeling for OpenSees-based Resilience Analysis</h1>
+            <p class="project-subtitle">Femora is a high-performance framework for automated FEM workflows. It supports complex soil-structure modeling and is designed for scalable meshing, domain decomposition, and simulation workflows.</p>
+            <div class="project-meta">
+                <span class="tag">OpenSees</span>
+                <span class="tag">Python</span>
+                <span class="tag">FEM</span>
+                <span class="tag">HPC</span>
+                <span class="tag">Domain Decomposition</span>
+            </div>
+            <div class="hero-btns">
+                <a href="https://github.com/amnp95/femora" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+                <a href="../index.html#projects" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <div class="container project-layout">
+                <div class="project-prose">
+                    <h2 class="project-heading">Overview: What Is Femora?</h2>
+                    <p>Femora is a computational engineering platform for building and managing advanced OpenSees-based finite element models. It provides a structured framework for model assembly, meshing, interface definition, execution setup, and result processing in a repeatable workflow.</p>
+                    <p>Rather than operating as a loose collection of scripts, Femora functions as a meta-modeling layer that standardizes how complex models are generated and executed. This improves reproducibility, scalability, and maintainability for resilience-oriented engineering studies.</p>
+                </div>
+                <aside class="card">
+                    <h3>Framework Focus</h3>
+                    <p>Femora helps automate model generation, execution, and post-processing for large-scale engineering problems while preserving engineering rigor and workflow consistency.</p>
+                    <div class="tags">
+                        <span class="tag">Automation</span>
+                        <span class="tag">Scalability</span>
+                        <span class="tag">Reproducibility</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="project-section bg-light">
+            <div class="container">
+                <h2 class="project-heading">Why It Matters</h2>
+                <ul class="problem-list">
+                    <li><strong>Complex FEM workflows:</strong> advanced models often require many manual steps that are hard to maintain and reproduce.</li>
+                    <li><strong>Soil-structure interaction:</strong> coupled models require careful interface treatment, consistent meshing, and robust setup logic.</li>
+                    <li><strong>Meshing bottlenecks:</strong> large-scale simulation campaigns are limited when meshing and assembly remain mostly manual.</li>
+                    <li><strong>HPC execution complexity:</strong> preparing and running distributed simulations introduces significant orchestration overhead.</li>
+                    <li><strong>Scalable domain decomposition:</strong> efficient partitioning is critical to unlock performance for large engineering systems.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container">
+                <h2 class="project-heading">Key Capabilities</h2>
+                <div class="capability-grid">
+                    <article class="feature-card">
+                        <h3>DRM for Consistent 3D Input</h3>
+                        <p>Implements Domain Reduction Method pipelines for physically consistent 3D wave input to regional-to-local seismic simulations.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>PML Boundary Modeling</h3>
+                        <p>Supports Perfectly Matched Layers to absorb outgoing waves and reduce artificial reflections at model boundaries.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Embedded Elements</h3>
+                        <p>Provides embedded beam-solid workflows for deep foundations and pile-soil interaction in complex geotechnical systems.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Automated Assembly</h3>
+                        <p>Automates model assembly and simulation workflow generation to reduce repetitive setup and improve reliability.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Flexible Decomposition</h3>
+                        <p>Enables configurable domain decomposition strategies for scalable execution on multi-core and distributed HPC systems.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-light">
+            <div class="container project-layout">
+                <div>
+                    <h2 class="project-heading">Workflow Example</h2>
+                    <p class="project-note">Femora allows interface definitions to be expressed programmatically and integrated directly into automated model generation pipelines:</p>
+                    <pre class="project-code-block"><code>fm.interface.EmbeddedBeamSolidInterface(
+    name="PileSoilInterface",
+    beam_part="PileGroup",
+    radius=0.5,
+    n_peri=8,
+    n_long=10
+)</code></pre>
+                    <p class="project-note">This kind of interface-driven workflow helps keep advanced pile-soil models physically meaningful while remaining scalable and reproducible.</p>
+                </div>
+                <aside class="card">
+                    <h3>Automation Pipeline</h3>
+                    <p>Femora is designed to automate model generation, execution, and post-processing for large-scale engineering campaigns, enabling faster research iteration and more robust production workflows.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="container">
+                <h2 class="project-heading">Visual Modules</h2>
+                <p class="project-note">Replace each placeholder with your Femora figures as they become available.</p>
+                <div class="visual-grid">
+                    <figure class="visual-tile">
+                        <div class="visual-placeholder">Building + layered soil + piles model</div>
+                        <figcaption>System-scale model with superstructure, layered basin, and foundation interaction.</figcaption>
+                    </figure>
+                    <figure class="visual-tile">
+                        <div class="visual-placeholder">Central Femora engine diagram</div>
+                        <figcaption>Architecture view showing how Femora orchestrates assembly, solve, and post-processing stages.</figcaption>
+                    </figure>
+                    <figure class="visual-tile">
+                        <div class="visual-placeholder">Embedded beam-solid interface example</div>
+                        <figcaption>Detail view for pile-soil coupling through embedded element interfaces.</figcaption>
+                    </figure>
+                    <figure class="visual-tile">
+                        <div class="visual-placeholder">Domain decomposition example</div>
+                        <figcaption>Partitioned model layout for scalable distributed simulation.</figcaption>
+                    </figure>
+                    <figure class="visual-tile">
+                        <div class="visual-placeholder">Layered soil basin image</div>
+                        <figcaption>Representative layered geotechnical basin setup for seismic resilience studies.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section bg-light">
+            <div class="container">
+                <div class="cta-panel">
+                    <h2 class="project-heading">Collaborate on Femora</h2>
+                    <p>Femora is actively evolving as a framework for scalable OpenSees-centered resilience analysis. Collaboration is welcome across computational mechanics, software engineering, and high-performance simulation workflows.</p>
+                    <div class="cta-actions">
+                        <a href="https://github.com/amnp95/femora" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+                        <a href="#" class="btn btn-secondary">Documentation (Coming Soon)</a>
+                        <a href="mailto:amnp95@uw.edu" class="btn btn-secondary">Contact / Collaboration</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Amin Pakzad. Built with precision and passion for computational science.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

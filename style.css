@@ -101,6 +101,9 @@ section { padding: 6rem 0; }
 .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; background: var(--bg-tertiary); color: var(--text-secondary); border-radius: 4px; border: 1px solid #cbd5e1; }
 .card-link { font-weight: 600; font-size: 0.9rem; color: var(--accent-primary); display: inline-flex; align-items: center; gap: 0.25rem; }
 .card-link:hover { text-decoration: underline; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.card-link-secondary { color: var(--text-secondary); }
+.card-link-secondary:hover { color: var(--accent-primary); }
 
 /* Blog Section */
 .blog-card { display: flex; gap: 2rem; background: white; border-radius: 12px; padding: 2rem; border: 1px solid var(--border-color); margin-bottom: 1.5rem; transition: transform 0.2s; }
@@ -125,6 +128,182 @@ section { padding: 6rem 0; }
 /* Footer */
 footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem; background: white; }
 
+/* Femora Project Page */
+.project-page .project-hero {
+    padding: 9.5rem 0 5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-kicker {
+    display: inline-block;
+    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.project-title {
+    font-size: 3rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+    max-width: 980px;
+}
+
+.project-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 900px;
+    margin-bottom: 1.8rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.project-section {
+    padding: 4.5rem 0;
+}
+
+.project-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.project-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-prose p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.project-note {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+}
+
+.problem-list {
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.problem-list li {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    color: var(--text-secondary);
+}
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.project-code-block {
+    margin-top: 1rem;
+    border-radius: 12px;
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    box-shadow: var(--shadow-md);
+    overflow-x: auto;
+}
+
+.project-code-block code {
+    display: block;
+    padding: 1.25rem;
+    color: #e2e8f0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    white-space: pre;
+}
+
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.visual-tile {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.visual-placeholder {
+    min-height: 190px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffedd5 100%);
+}
+
+.visual-tile figcaption {
+    padding: 0.9rem 1rem;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.cta-panel {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+}
+
+.cta-panel p {
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
 @media (max-width: 768px) {
     .hero-container { flex-direction: column-reverse; text-align: center; gap: 3rem; }
     .hero-content { text-align: center; }
@@ -135,4 +314,8 @@ footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border
     .contact-grid { grid-template-columns: 1fr; }
     .invite-box { padding: 2rem; }
     .nav-links { display: none; /* In a real app, add a hamburger menu */ }
+    .project-page .project-hero { padding: 8rem 0 4rem; }
+    .project-title { font-size: 2.2rem; }
+    .project-layout { grid-template-columns: 1fr; }
+    .visual-placeholder { min-height: 160px; }
 }
