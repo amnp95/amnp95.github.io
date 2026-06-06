@@ -728,64 +728,144 @@ footer {
         height: 120px;
     }
 
+    /* Keep timeline horizontal and scrollable on mobile */
+    #timeline-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        padding-bottom: 0.75rem; /* space for scrollbar */
+    }
+
+    .split-timeline {
+        min-width: 580px; /* compact horizontal width */
+        padding-top: 4.5rem; /* prevent top tooltip clipping */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
     .timeline-axis-row {
-        display: none;
+        display: grid !important;
+        margin: 0.15rem 0;
     }
-    
+
     .timeline-row-compact {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.15rem;
     }
-    
+
     .timeline-track {
-        display: block;
-        border: none;
-        background: transparent;
-        height: auto;
-        padding: 0;
-    }
-    
-    .timeline-bar {
-        display: block;
-        width: 100% !important;
-        grid-column: auto !important;
+        display: grid !important;
+        border: 1px dashed var(--border-color);
         background: var(--bg-tertiary);
-        border: 1px solid var(--border-color);
-        padding: 0.5rem 0.75rem;
-        height: auto;
-        border-radius: 4px;
-    }
-    
-    .timeline-bar::before,
-    .timeline-bar::after {
-        display: none; /* hide arrows on mobile list */
-    }
-    
-    .timeline-bar-line {
-        display: none; /* hide arrow-line on mobile list */
-    }
-    
-    .timeline-bar-text {
-        color: var(--text-primary);
-        font-size: 0.8rem;
-        white-space: normal;
-        display: block;
-        line-height: 1.4;
-        background: transparent;
+        height: 24px;
         padding: 0;
     }
 
-    .timeline-date-sub {
-        display: block;
-        font-family: monospace;
-        font-size: 0.72rem;
-        color: var(--text-secondary);
-        margin-top: 0.25rem;
+    .timeline-bar {
+        display: flex !important;
+        background: transparent;
+        border: none;
+        padding-left: 0.35rem;
+        padding-right: 0.35rem;
+        height: 100%;
+        border-radius: 0;
+        position: relative;
+    }
+
+    /* Scale down arrowheads on mobile */
+    .timeline-bar::before {
+        display: block !important;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-right: 6px solid var(--text-secondary);
+        z-index: 2;
+        transition: border-color 0.2s ease;
+    }
+
+    .timeline-bar::after {
+        display: block !important;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 6px solid var(--text-secondary);
+        z-index: 2;
+        transition: border-color 0.2s ease;
+    }
+
+    .timeline-bar-line {
+        display: block !important;
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background: var(--text-secondary);
+        z-index: 1;
+        transition: background-color 0.2s ease;
+    }
+
+    /* Scale down fonts for compactness */
+    .timeline-years-row {
+        display: grid !important;
+        font-size: 0.68rem;
+    }
+
+    .timeline-years-row span {
+        border-width: 2px !important;
+        padding: 0.08rem 0.3rem !important;
+    }
+
+    .timeline-bar-text {
+        font-size: 0.65rem !important;
+        padding: 0 0.25rem !important;
     }
 
     .timeline-inst-sub {
-        display: inline;
-        font-weight: 400;
-        opacity: 0.85;
+        display: none !important; /* hide institution inside the bar to save space on mobile */
+    }
+
+    .timeline-date-sub {
+        display: none !important; /* hide dates inside the bar as they are shown on the axis */
+    }
+
+    /* Restore tooltips to absolute display on mobile scrollable layout */
+    .timeline-tooltip {
+        position: absolute !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 200px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 0.5rem !important;
+        background: var(--bg-primary) !important;
+        pointer-events: none !important;
+        transform: translateX(-50%) !important;
+        bottom: 160% !important;
+        left: 50% !important;
+        z-index: 100 !important;
+    }
+
+    .timeline-tooltip::before,
+    .timeline-tooltip::after {
+        display: block !important;
+    }
+
+    .timeline-tooltip div:first-child,
+    .timeline-tooltip div:last-child {
+        display: block !important;
     }
 
     .footer-container {
