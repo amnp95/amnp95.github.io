@@ -4,155 +4,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amin Pakzad - Computational Engineer & Researcher</title>
+    <title>Amin Pakzad — Applied Scientist (ML) | Massively Parallel Systems & HPC</title>
     <!-- Modern, academic Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script>
+        // Inline script to prevent theme flash on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
-
+ 
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Amin Pakzad</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#invite">Collaborate</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero / About Section -->
-    <section id="about" class="hero">
-        <div class="container hero-container">
+    <div class="container">
+        <!-- Top Navigation / Utilities Bar -->
+        <nav class="top-nav">
+            <div class="top-nav-left"></div>
+            <div class="theme-toggle-wrap">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <!-- Moon icon (shows in light mode) -->
+                    <svg class="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <!-- Sun icon (shows in dark mode) -->
+                    <svg class="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+            </div>
+        </nav>
+ 
+        <!-- Hero / About Section -->
+        <header class="hero-container">
             <div class="hero-content">
-                <h1>Computational Engineer & <span>Researcher</span></h1>
-                <p>PhD student at University of Washington. Specializing in computational seismology, finite element
-                    analysis, and high-performance scientific computing for structural engineering.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
-                    <a href="#invite" class="btn btn-secondary">Invite to Collaborate</a>
+                <h1>Amin Pakzad</h1>
+                <p class="bio-text">Hi, I'm Amin! I build software at the intersection of high-performance computing (HPC), physical simulation, and machine learning.<br><br>Currently, I am a PhD Candidate at the University of Washington and an MS in CS student at Georgia Tech. I focus on optimizing Python/C++ applications to scale across thousands of cores (MPI, CUDA, OpenMP), designing fast numerical solvers, and training applied ML models.</p>
+                
+                <div class="profile-links">
+                    <a href="https://scholar.google.com/citations?user=HxpT9pkAAAAJ&hl=en" target="_blank" class="profile-link" title="Google Scholar">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 18.8 6 12"/><path d="M18 12v6.8a1.6 1.6 0 0 1-3.2 0v-4.5"/></svg>
+                        <span>Google Scholar</span>
+                    </a>
+                    <a href="https://github.com/amnp95" target="_blank" class="profile-link" title="GitHub">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/amin-pakzad-8a05b0127/" target="_blank" class="profile-link" title="LinkedIn">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="./Amin_Pakzad_CV.pdf" target="_blank" class="profile-link" title="CV / Resume">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        <span>CV / Resume</span>
+                    </a>
+                    <a href="mailto:amnp95@uw.edu" class="profile-link" title="Email">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span>Email</span>
+                    </a>
                 </div>
             </div>
             <div class="hero-profile">
                 <div class="hero-image">
-                    <!-- Replace the src with your actual photo filename, e.g., 'profile.jpg' -->
                     <img src="./images/portfolio.PNG" alt="Amin Pakzad">
+                </div>
+                <div class="school-badges">
+                    <img src="./images/UW.png" alt="University of Washington" title="University of Washington">
+                    <img src="./images/GT.png" alt="Georgia Tech" title="Georgia Tech">
+                </div>
+            </div>
+        </header>
+
+        <!-- Timeline Section -->
+        <section>
+            <h2 class="section-title">Timeline</h2>
+            <div id="timeline-container"></div>
+        </section>
+
+        <!-- Dynamic Timeline Processing script -->
+        <script type="module">
+            import { timelineData } from './data/timeline.js';
+
+            const container = document.getElementById('timeline-container');
+            if (container) {
+                const currentYear = new Date().getFullYear();
+                
+                let minYear = Infinity;
+                let maxYear = -Infinity;
+
+                // Sort items by startYear descending (most recent on top).
+                // If start years are equal, sort by id descending (larger ID started later).
+                const sortedTimeline = [...timelineData].sort((a, b) => {
+                    const startA = parseInt(a.startYear);
+                    const startB = parseInt(b.startYear);
+                    if (startB !== startA) {
+                        return startB - startA;
+                    }
+                    return b.id - a.id;
+                });
+
+                const items = sortedTimeline.map(item => {
+                    const start = parseInt(item.startYear);
+                    let end = item.endYear;
+                    if (end === 'Present') {
+                        end = currentYear;
+                    } else {
+                        end = parseInt(end);
+                    }
+                    if (start < minYear) minYear = start;
+                    if (end > maxYear) maxYear = end;
+                    return { ...item, start, end };
+                });
+
+                const totalYears = maxYear - minYear + 1;
+
+                // Algorithm to pack items into non-overlapping rows
+                const packItemsIntoRows = (categoryItems) => {
+                    // Sort items by startYear ascending
+                    const sorted = [...categoryItems].sort((a, b) => a.start - b.start);
+                    const rows = [];
                     
-                    <!-- University Affiliation Badges -->
-                    <div class="school-badges">
-                        <img src="./images/UW.png" alt="University of Washington" title="University of Washington">
-                        <img src="./images/GT.png" alt="Georgia Tech" title="Georgia Tech">
-                    </div>
-                </div>
-                <div class="hero-links">
-                    <a href="https://scholar.google.com/citations?user=HxpT9pkAAAAJ&hl=en" target="_blank" title="Google Scholar">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px;"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.911L12 18l7.162-4.589L24 9.5z"/></svg>
-                        Scholar
-                    </a>
-                    <a href="https://www.linkedin.com/in/amin-pakzad-8a05b0127/" target="_blank" title="LinkedIn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px;"><path d="M22.23 0H1.77C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.77 24H22.23C23.208 24 24 23.227 24 22.271V1.729C24 0.774 23.208 0 22.23 0ZM7.11 20.452H3.555V8.995H7.11V20.452ZM5.333 7.425C4.195 7.425 3.275 6.505 3.275 5.367C3.275 4.23 4.194 3.31 5.333 3.31C6.47 3.31 7.39 4.23 7.39 5.367C7.39 6.504 6.47 7.425 5.333 7.425ZM20.452 20.452H16.897V14.88C16.897 13.553 16.87 11.847 15.05 11.847C13.204 11.847 12.92 13.287 12.92 14.786V20.452H9.366V8.995H12.78V10.56H12.827C13.303 9.658 14.468 8.707 16.2 8.707C19.807 8.707 20.452 11.082 20.452 14.15V20.452Z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/amnp95" target="_blank" title="GitHub">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px;"><path d="M12 0C5.37 0 0 5.37 0 12C0 17.3 3.438 21.8 8.205 23.385C8.805 23.495 9.025 23.12 9.025 22.81C9.025 22.535 9.015 21.71 9.01 20.64C5.67 21.365 4.965 19.035 4.965 19.035C4.42 17.65 3.63 17.275 3.63 17.275C2.54 16.53 3.715 16.545 3.715 16.545C4.925 16.63 5.56 17.785 5.56 17.785C6.635 19.63 8.38 19.1 9.06 18.785C9.17 18.005 9.48 17.47 9.82 17.165C7.155 16.86 4.35 15.83 4.35 11.235C4.35 9.93 4.815 8.865 5.57 8.01C5.45 7.705 5.045 6.495 5.69 4.845C5.69 4.845 6.69 4.525 9.01 6.095C9.96 5.83 10.98 5.7 12 5.695C13.02 5.7 14.04 5.83 14.99 6.095C17.31 4.525 18.31 4.845 18.31 4.845C18.96 6.495 18.55 7.705 18.43 8.01C19.185 8.865 19.65 9.93 19.65 11.235C19.65 15.845 16.84 16.855 14.16 17.15C14.59 17.52 14.97 18.245 14.97 19.38C14.97 21.005 14.955 22.31 14.955 22.81C14.955 23.125 15.17 23.505 15.785 23.38C20.555 21.8 24 17.3 24 12C24 5.37 18.63 0 12 0Z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="./Amin_Pakzad_CV.pdf" target="_blank" title="CV / Resume">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px;"><path d="M14 2H6C4.89 2 4 2.9 4 4V20C4 21.1 4.89 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20ZM8 14H16V16H8V14ZM8 10H16V12H8V10Z"/></svg>
-                        CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    sorted.forEach(item => {
+                        let placed = false;
+                        for (let i = 0; i < rows.length; i++) {
+                            const row = rows[i];
+                            const hasOverlap = row.some(existing => {
+                                // Overlap occurs if one starts during the other
+                                return (item.start >= existing.start && item.start <= existing.end) ||
+                                       (existing.start >= item.start && existing.start <= item.end);
+                            });
+                            if (!hasOverlap) {
+                                row.push(item);
+                                placed = true;
+                                break;
+                            }
+                        }
+                        if (!placed) {
+                            rows.push([item]);
+                        }
+                    });
+                    return rows;
+                };
 
+                // Helper to render a single track containing multiple bars
+                const renderRowHTML = (rowItems) => {
+                    let barsHTML = '';
+                    rowItems.forEach(item => {
+                        const startCol = item.start - minYear + 1;
+                        const endCol = (item.endYear === 'Present') ? (totalYears + 1) : (item.end - minYear + 1); // grid span is exclusive of the end index
+                        barsHTML += `
+                            <div class="timeline-bar" style="grid-column: ${startCol} / ${endCol};">
+                                <div class="timeline-bar-line"></div>
+                                <span class="timeline-bar-text">${item.title} <span class="timeline-inst-sub">(${item.institution})</span><span class="timeline-date-sub"> — ${item.startYear}–${item.endYear}</span></span>
+                                <div class="timeline-tooltip">
+                                    <div style="font-size: 0.82rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-primary);">${item.title}</div>
+                                    <div style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.4;">${item.description}</div>
+                                    <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.4rem; font-family: monospace;">Duration: ${item.startYear} – ${item.endYear}</div>
+                                </div>
+                            </div>
+                        `;
+                    });
 
-    <!-- Projects -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Selected <span>Projects</span></h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>FEMORA</h3>
-                    <p>A high-performance framework for automated FEM workflows, enabling scalable meshing, domain decomposition, and simulation for large-scale engineering problems.</p>
-                    <div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">MPI</span><span class="tag">HPC</span></div>
-                    <div class="card-actions">
-                        <a href="./pages/femora.html" class="card-link">Project Page &rarr;</a>
-                        <a href="https://github.com/amnp95/femora" target="_blank" rel="noopener noreferrer" class="card-link card-link-secondary">GitHub &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    return `
+                        <div class="timeline-row-compact">
+                            <div class="timeline-track" style="grid-template-columns: repeat(${totalYears}, 1fr);">
+                                ${barsHTML}
+                            </div>
+                        </div>
+                    `;
+                };
 
+                // Split into categories
+                const educationItems = items.filter(x => x.type === 'education');
+                const workItems = items.filter(x => x.type === 'work');
 
-    <!-- TODO: Remove the `hidden` attribute below when you are ready to add real blog posts! -->
-    <section id="blog" class="bg-light" hidden>
-        <div class="container">
-            <h2 class="section-title">Research & <span>Writing</span></h2>
-            <div id="blog-container"></div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#" class="btn btn-secondary">View All Publications & Posts</a>
-            </div>
-        </div>
-    </section>
+                // Pack items
+                const educationRows = packItemsIntoRows(educationItems);
+                const workRows = packItemsIntoRows(workItems);
 
-    <!-- Collaborate / Invite Section -->
-    <section id="invite">
-        <div class="container">
-            <div class="invite-box">
-                <h2>Let's <span>Collaborate</span></h2>
-                <p>I'm currently open for speaking engagements, research collaborations, and consulting opportunities in
-                    computational mechanics and high-performance engineering.</p>
+                let educationHTML = '<div class="timeline-top-group">';
+                educationRows.forEach(row => {
+                    educationHTML += renderRowHTML(row);
+                });
+                educationHTML += '</div>';
 
-                <a href="mailto:amnp95@uw.edu" class="btn btn-primary"
-                    style="font-size: 1.1rem; padding: 1rem 2.5rem; margin-top: 1rem;">Send an Invitation</a>
-
-                <div class="contact-grid">
-                    <a href="mailto:amnp95@uw.edu" class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></svg>
-                        Email Me
-                    </a>
-                    <a href="https://github.com/amnp95" target="_blank" class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12C0 17.3 3.438 21.8 8.205 23.385C8.805 23.495 9.025 23.12 9.025 22.81C9.025 22.535 9.015 21.71 9.01 20.64C5.67 21.365 4.965 19.035 4.965 19.035C4.42 17.65 3.63 17.275 3.63 17.275C2.54 16.53 3.715 16.545 3.715 16.545C4.925 16.63 5.56 17.785 5.56 17.785C6.635 19.63 8.38 19.1 9.06 18.785C9.17 18.005 9.48 17.47 9.82 17.165C7.155 16.86 4.35 15.83 4.35 11.235C4.35 9.93 4.815 8.865 5.57 8.01C5.45 7.705 5.045 6.495 5.69 4.845C5.69 4.845 6.69 4.525 9.01 6.095C9.96 5.83 10.98 5.7 12 5.695C13.02 5.7 14.04 5.83 14.99 6.095C17.31 4.525 18.31 4.845 18.31 4.845C18.96 6.495 18.55 7.705 18.43 8.01C19.185 8.865 19.65 9.93 19.65 11.235C19.65 15.845 16.84 16.855 14.16 17.15C14.59 17.52 14.97 18.245 14.97 19.38C14.97 21.005 14.955 22.31 14.955 22.81C14.955 23.125 15.17 23.505 15.785 23.38C20.555 21.8 24 17.3 24 12C24 5.37 18.63 0 12 0Z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/amin-pakzad-8a05b0127/" target="_blank" class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.77 24H22.23C23.208 24 24 23.227 24 22.271V1.729C24 0.774 23.208 0 22.23 0ZM7.11 20.452H3.555V8.995H7.11V20.452ZM5.333 7.425C4.195 7.425 3.275 6.505 3.275 5.367C3.275 4.23 4.194 3.31 5.333 3.31C6.47 3.31 7.39 4.23 7.39 5.367C7.39 6.504 6.47 7.425 5.333 7.425ZM20.452 20.452H16.897V14.88C16.897 13.553 16.87 11.847 15.05 11.847C13.204 11.847 12.92 13.287 12.92 14.786V20.452H9.366V8.995H12.78V10.56H12.827C13.303 9.658 14.468 8.707 16.2 8.707C19.807 8.707 20.452 11.082 20.452 14.15V20.452Z"/></svg>
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Amin Pakzad. Built with precision and passion for computational science.</p>
-        </div>
-    </footer>
-
-    <!-- Main JavaScript (Loads specific components like dynamic blogs) -->
-    <script type="module" src="/main.js"></script>
-
-    <script>
-        // Smooth scrolling for navigation anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Central axis
+                let axisHTML = `
+                    <div class="timeline-axis-row">
+                        <div class="timeline-years-row" style="grid-template-columns: repeat(${totalYears}, 1fr);">
+                `;
+                for (let y = minYear; y <= maxYear; y++) {
+                    axisHTML += `<span>${y}</span>`;
                 }
-            });
-        });
-    </script>
+                axisHTML += `
+                        </div>
+                    </div>
+                `;
+
+                let workHTML = '<div class="timeline-bottom-group">';
+                workRows.forEach(row => {
+                    workHTML += renderRowHTML(row);
+                });
+                workHTML += '</div>';
+
+                container.innerHTML = `
+                    <div class="split-timeline">
+                        <div class="timeline-legend" style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Education</div>
+                        ${educationHTML}
+                        ${axisHTML}
+                        <div class="timeline-legend" style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem; margin-bottom: 0.25rem;">Experience</div>
+                        ${workHTML}
+                    </div>
+                `;
+            }
+        </script>
+
+        <!-- Projects Section (Barron style rows) -->
+        <section>
+            <h2 class="section-title">Research Projects & Software</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-row">
+                <div class="project-img project-img-contain">
+                    <img src="https://raw.githubusercontent.com/amnp95/femora/main/website/ReadMe.png" alt="Femora Logo">
+                </div>
+                <div class="project-details">
+                    <h3>Femora</h3>
+                    <p>A high-performance Python/C++ framework for automated model generation, geometry processing, and METIS-based domain decomposition. Designed to execute large-scale simulation workloads on distributed HPC clusters (TACC), reducing data preparation time from weeks to minutes.</p>
+                    <div class="project-meta">
+                        <span style="font-family: monospace; font-size: 0.8rem; margin-right: 1rem; color: #666;">Python · C++ · MPI · METIS · HPC</span>
+                        <a href="./pages/femora.html">Project Details &rarr;</a>
+                        <a href="https://github.com/amnp95/femora" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 (Hidden for now)
+            <div class="project-row">
+                <div class="project-img">
+                    <img src="./images/real_time_fem_mesh.png" alt="WebGPU FEM Mesh">
+                </div>
+                <div class="project-details">
+                    <h3>Real-Time Browser-Based FEM</h3>
+                    <p>An experimental implementation of browser-based GPU acceleration utilizing WebGPU and GLSL/WGSL to execute parallel numerical solvers (Jacobi conjugate gradient) and interactive 3D simulations inside standard client environments.</p>
+                    <div class="project-meta">
+                        <span style="font-family: monospace; font-size: 0.8rem; margin-right: 1rem; color: #666;">JavaScript · GLSL/WGSL · WebGPU · Parallel Computing</span>
+                        <a href="./pages/real-time-fem.html">Brief Report &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            -->
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2 class="section-title">Contact & Collaboration</h2>
+            <p class="contact-text">I am always open to discuss opportunities, research, or potential collaborations in high-performance systems engineering, applied machine learning, and large-scale physical simulations. Please feel free to reach out at <a href="mailto:amin.pakzad.work@gmail.com">amin.pakzad.work@gmail.com</a> or <a href="mailto:amnp95@uw.edu">amnp95@uw.edu</a>.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2026 Amin Pakzad. Built with simplicity, precision, and passion for high-performance systems and scientific computing.</p>
+            </div>
+        </footer>
+
+        <!-- Theme Toggle Event Handler -->
+        <script>
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                });
+            }
+        </script>
+    </div>
 </body>
 
 </html>
